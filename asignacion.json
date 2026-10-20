@@ -1,0 +1,10 @@
+{
+  "codigo": "A008",
+  "conjunto": "cierre_aula_01",
+  "version": 1,
+  "sha256": {
+    "reservas_pdi.csv": "689fdb83e385b6efeb3cd5f5fc87bac09b70c37b7fdf7b41e2eb79c9d5c5f1a1",
+    "cobros_pdi.csv": "ec2158c173d7b85881b076b24a7047a5f980afb0c55bdd4e750445651fadbdae",
+    "hoteles_pdi.csv": "6b8eefbfb78467e56e8913720bbb67ac10b345ea431a115b5fdc09933ed7f7b3"
+  }
+}

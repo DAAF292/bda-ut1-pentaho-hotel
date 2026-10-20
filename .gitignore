@@ -1,0 +1,13 @@
+# Resultados provisionales (se regeneran con el job)
+/temporal/
+
+# Copias de respaldo de Spoon
+*.bak
+*.ktr~
+*.kjb~
+*.ktr.bak
+*.kjb.bak
+
+# Sistema
+Thumbs.db
+.DS_Store
