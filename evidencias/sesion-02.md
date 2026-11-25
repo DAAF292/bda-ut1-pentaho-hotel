@@ -11,13 +11,13 @@
 ## Qué he ejecutado y qué resultado he obtenido
 - `python3 evidencias/referencia.py`: 13 grupos, 15 reservas cobradas, 3965.50 €, sin cobro = 4, 9, 11, 15, 18, reconciliación 15 + 5 = 20.
 - Comprobación estática de los `.ktr`/`.kjb`: XML válido, sin conexiones ni destinos de filtro inexistentes.
-- <!-- TODO: abrir cada .ktr en Spoon, vista previa de cada paso y anotar filas (15/15/13; 20→5) -->
+- Ejecución con Kitchen: filas reales 20/15/5 leídas, 15 tras cada INNER, 13 grupos; LEFT OUTER 20 → 5 sin cobro (ver `comprobaciones.md`). Pendiente la vista previa en Spoon.
 
 ## Dónde están las evidencias
 - `evidencias/comprobaciones.md`; <!-- TODO: capturas de Spoon con interpretación -->
 
 ## Qué error o trabajo queda pendiente
-- Ningún proceso se ha ejecutado aún en Spoon/Pan. Si Spoon marca algún paso como no válido, anotarlo aquí y corregirlo.
+- Procesos ejecutados en consola (Kitchen/Pan) sin errores; falta abrirlos en la interfaz de Spoon. Si Spoon marca algo, anotarlo aquí.
 
 ## Qué ayuda he recibido y cómo la he utilizado
 - Claude Code (IA): generó el borrador de los procesos y la documentación. Lo he leído y lo revisaré en Spoon para poder explicarlo. <!-- TODO: ajustar con ayudas reales -->

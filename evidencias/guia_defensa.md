@@ -1,6 +1,6 @@
 # Guía para preparar la defensa individual
 
-Para defender hay que comprender lo construido. Esta guía resume qué hace cada proceso, qué abrir en Spoon antes de la defensa y las preguntas probables con su respuesta. **Los procesos se han generado con ayuda de IA y aún no se han abierto en Spoon**: antes de defender, abrirlos todos, guardarlos y recorrerlos paso a paso.
+Para defender hay que comprender lo construido. Esta guía resume qué hace cada proceso, qué abrir en Spoon antes de la defensa y las preguntas probables con su respuesta. **Los procesos se han generado con ayuda de IA y se han ejecutado con Kitchen/Pan (consola), pero no se han abierto en la interfaz de Spoon**: antes de defender, abrirlos todos, guardarlos y recorrerlos paso a paso. Los logs reales están en `evidencias/logs/`.
 
 ## 1. Checklist antes de la defensa (en Spoon)
 1. Abrir `informe_cobros.ktr` → guardar → *Run*. Comprobar que no hay pasos en rojo. Vista previa tras cada *Merge join* (15 filas) y tras *Group by* (13). Si un paso marca error de campo, revisar nombres de campos en la pestaña de campos de ese paso.
@@ -8,7 +8,7 @@ Para defender hay que comprender lo construido. Esta guía resume qué hace cada
 3. Abrir `validar_informe.ktr` y `validar_sin_cobro.ktr` → ejecutar con el provisional correcto (pasan) y con uno solo con cabecera (fallan).
 4. Abrir `cierre_hotel.kjb` → ejecutar → comprobar el orden y que cada rama roja lleva a un *Abort job*.
 5. Ejecutar `ejecutar_pruebas.sh` (o las seis pruebas a mano) y leer los logs.
-6. Si algún paso no abre o falla, **anotarlo en la sesión y corregirlo**; es normal al abrir procesos generados por otra herramienta (versiones de plugin, nombre de la configuración de ejecución del job *Pentaho local*, etc.).
+6. Si algún paso no abre o falla en Spoon, **anotarlo en la sesión y corregirlo**. Kitchen ya los carga y ejecuta bien con 9.4.0.0-343, así que lo esperable es que solo cambie algo visual (posición de pasos, notas).
 
 ## 2. Qué hace cada proceso
 | Proceso | Entrada | Salida | Idea clave |

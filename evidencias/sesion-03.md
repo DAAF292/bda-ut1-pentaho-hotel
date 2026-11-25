@@ -9,14 +9,14 @@
 - README completo con explicación para gerencia.
 
 ## Qué he ejecutado y qué resultado he obtenido
-- <!-- TODO: resultado real de `ejecutar_pruebas.sh` (copiar evidencias/logs/resumen_pruebas.txt) -->
+- Kitchen/Pan 9.4.0.0-343 con OpenJDK 11: job completo con éxito (código 0) y las seis pruebas + la de copia fallida con el resultado esperado. Resumen: `evidencias/logs/resumen_pruebas.txt`.
 - <!-- TODO: ejecución desde otra carpeta (clon limpio) siguiendo solo el README -->
 
 ## Dónde están las evidencias
-- `evidencias/logs/` <!-- TODO: tras ejecutar -->
+- `evidencias/logs/` (siete logs) y `evidencias/pruebas.md` con cada resultado explicado.
 
 ## Qué error o trabajo queda pendiente
-- Ejecutar y documentar las pruebas; rellenar «obtenido en Pentaho» en `comprobaciones.md`.
+- Repetir las pruebas en Spoon/Kitchen en el aula; abrir cada proceso en Spoon (aún solo ejecutados en consola).
 
 ## Qué ayuda he recibido y cómo la he utilizado
 - <!-- TODO -->

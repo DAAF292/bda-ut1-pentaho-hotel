@@ -1,0 +1,41 @@
+=== Prueba 1: primera ejecución (sin informes anteriores) ===
+exit Kitchen = 0 (esperado 0)
+ 14 /opt/work/repo/salida/informe_hotel_canal.csv
+  6 /opt/work/repo/salida/reservas_sin_cobro.csv
+ 20 total
+2026/11/25 20:28:44 - Informe válido (log).0 - VALIDACION OK informe_hotel_canal.csv: 13 grupos, 15 reservas, 3965.50 EUR
+2026/11/25 20:28:44 - Sin cobro válido (log).0 - VALIDACION OK reservas_sin_cobro.csv: 5 reservas esperadas, sin duplicados
+2026/11/25 20:28:44 - Registrar exito - CIERRE CORRECTO: validadas y publicadas en salida/ las dos salidas (informe_hotel_canal.csv y reservas_sin_cobro.csv).
+=== Prueba 2: repetición con las mismas entradas ===
+exit Kitchen = 0 (esperado 0)
+ 14 /opt/work/repo/salida/informe_hotel_canal.csv
+  6 /opt/work/repo/salida/reservas_sin_cobro.csv
+ 20 total
+Huellas de salida IDÉNTICAS tras repetir: no se acumulan filas
+=== Prueba 3: falta una entrada (cobros_pdi.csv) ===
+exit Kitchen = 1 (esperado distinto de 0)
+2026/11/25 20:28:50 - Abortar: falta cobros_pdi.csv - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : FALTA LA ENTRADA entrada/cobros_pdi.csv. No se publica ningun informe.
+salida/ intacta: no se publicó nada nuevo
+=== Prueba 4: salida incompleta (solo cabecera) en copia provisional ===
+validar_informe: exit Pan = 1 (esperado distinto de 0)
+validar_sin_cobro: exit Pan = 1 (esperado distinto de 0)
+=== Prueba 5: total incorrecto en copia provisional ===
+exit Pan = 1 (esperado distinto de 0)
+=== Prueba 6: recuperación (entradas restauradas, job completo) ===
+689fdb83e385b6efeb3cd5f5fc87bac09b70c37b7fdf7b41e2eb79c9d5c5f1a1  reservas_pdi.csv
+ec2158c173d7b85881b076b24a7047a5f980afb0c55bdd4e750445651fadbdae  cobros_pdi.csv
+6b8eefbfb78467e56e8913720bbb67ac10b345ea431a115b5fdc09933ed7f7b3  hoteles_pdi.csv
+exit Kitchen = 0 (esperado 0)
+informe_hotel_canal.csv == referencia independiente (Python)
+reservas_sin_cobro.csv == referencia independiente (Python)
+Fin. Logs en evidencias/logs/. Restaura/verifica con git status que entrada/ no ha cambiado.
+
+=== Prueba 7: fallo durante la copia (ejecutada aparte, como usuario sin privilegios) ===
+(El script anterior se ejecutó como root, que ignora permisos; esta prueba se hizo con el usuario "nobody": salida/ de solo lectura,
+ informe_hotel_canal.csv existente con contenido VIEJO y reservas_sin_cobro.csv ausente.)
+exit Kitchen = 1 (esperado distinto de 0)
+Publicar informe_hotel_canal.csv: copia correcta (el archivo pasó de VIEJO al informe nuevo de 323 bytes)
+Publicar reservas_sin_cobro.csv: ERROR ... Permission denied
+Aviso: posible resultado parcial: ERROR EN LA PUBLICACION ... (resultado PARCIAL). No se anuncia exito.
+Abortar: publicacion incompleta: PUBLICACION INCOMPLETA ... El job termina con error.
+No aparece "CIERRE CORRECTO". Estado final de salida/: solo informe_hotel_canal.csv (nuevo); falta reservas_sin_cobro.csv => resultado parcial.

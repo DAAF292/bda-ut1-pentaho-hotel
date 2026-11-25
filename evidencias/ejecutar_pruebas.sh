@@ -18,6 +18,8 @@ dic() { echo "$*" | tee -a "$RES"; }
 hash_salida() { (cd "$RAIZ/salida" && sha256sum informe_hotel_canal.csv reservas_sin_cobro.csv 2>/dev/null); }
 restaurar() {
   [ -f "$RAIZ/entrada/cobros_pdi.csv.prueba" ] && mv -f "$RAIZ/entrada/cobros_pdi.csv.prueba" "$RAIZ/entrada/cobros_pdi.csv"
+  chmod u+w "$RAIZ/salida" 2>/dev/null
+  return 0
 }
 trap restaurar EXIT
 
@@ -58,4 +60,16 @@ python3 "$RAIZ/evidencias/referencia.py" "$LOG/referencia" >/dev/null
 for f in informe_hotel_canal.csv reservas_sin_cobro.csv; do
   diff -q "$LOG/referencia/$f" "$RAIZ/salida/$f" >/dev/null && dic "$f == referencia independiente (Python)" || dic "ATENCIÓN: $f difiere de la referencia"
 done
+dic "=== Prueba 7: fallo durante la copia (resultado parcial) ==="
+if [ "$(id -u)" = 0 ]; then
+  dic "Omitida: como root los permisos no impiden escribir. Ejecutar como usuario normal."
+else
+  printf 'hotel;canal;n_reservas;cobrado_total\nVIEJO;x;0;0.00\n' > "$RAIZ/salida/informe_hotel_canal.csv"
+  rm -f "$RAIZ/salida/reservas_sin_cobro.csv"; chmod a-w "$RAIZ/salida"   # la 1.ª copia sobrescribe, la 2.ª no puede crear
+  "$K" -file="$JOB" -level=Basic > "$LOG/07_copia_fallida.log" 2>&1; dic "exit Kitchen = $? (esperado distinto de 0)"
+  chmod u+w "$RAIZ/salida"
+  grep -E "ERROR EN LA PUBLICACION|PUBLICACION INCOMPLETA|CIERRE CORRECTO" "$LOG/07_copia_fallida.log" | tee -a "$RES"
+  dic "salida/ tras el fallo: $(ls "$RAIZ/salida" | tr '\n' ' ')  (esperado: solo informe_hotel_canal.csv, con contenido nuevo)"
+  "$K" -file="$JOB" -level=Basic > "$LOG/07b_restablecer.log" 2>&1; dic "restablecer: exit Kitchen = $? (esperado 0)"
+fi
 dic "Fin. Logs en evidencias/logs/. Restaura/verifica con git status que entrada/ no ha cambiado."
