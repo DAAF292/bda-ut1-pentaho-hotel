@@ -2,7 +2,7 @@
 
 Esta guía recorre el proyecto en el orden en que se explica en la defensa: qué problema resuelve, qué datos entran, qué hace cada proceso paso a paso, por qué se hace así y cómo se comprueba. Las imágenes están en [`capturas/`](capturas/) y son capturas reales de Spoon (PDI 9.4.0.0-343).
 
-> **Aviso sobre las capturas.** Se tomaron en una pantalla virtual de Linux. Las notas amarillas del lienzo aún dicen `NOMBRE_ALUMNO`; al sustituirlo por vuestro nombre y volver a guardar en Spoon, conviene repetir las capturas con vuestro equipo.
+> **Aviso sobre las capturas.** Se tomaron en una pantalla virtual de Linux antes de poner el nombre del autor, así que las notas amarillas de las imágenes todavía dicen `NOMBRE_ALUMNO`. En los archivos `.ktr`/`.kjb` la nota ya lleva el nombre; al abrirlos en Spoon lo verás. Si queréis capturas con el nombre, repetidlas en vuestro equipo.
 
 ---
 

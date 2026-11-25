@@ -2,7 +2,7 @@
 
 Práctica integradora de la UT1 (Big Data Aplicado): informe de cobros del grupo hotelero de Cantabria con Pentaho Data Integration (PDI).
 
-- **Autor:** NOMBRE_ALUMNO
+- **Autor:** Diego Andrés Afanador
 - **Código de paquete asignado:** **A008** (conjunto `cierre_aula_01`, ver `asignacion.json`)
 - **Repositorio:** `bda-ut1-pentaho-hotel`
 
@@ -133,5 +133,5 @@ Habitaciones disponibles y ocupadas por hotel y por periodo (día/mes), o bien e
 
 - Apuntes y talleres de la UT1 (1.3 a 1.8) y enunciado de la práctica.
 - **Ayuda de una herramienta de IA (Claude Code, de Anthropic):** la utilicé para generar el borrador de los cinco procesos `.ktr`/`.kjb`, el script de contraste `evidencias/referencia.py`, el script `evidencias/ejecutar_pruebas.sh` y el primer borrador de la documentación. Ejecutó los procesos con Kitchen/Pan en modo consola, generó los logs de `evidencias/logs/` y las capturas de `evidencias/capturas/`. Yo he revisado los procesos, he comprobado los resultados contra las cifras de referencia del enunciado y los he estudiado para poder explicarlos.
-- Lo que adapté o decidí yo: <!-- TODO: completar con tus propias palabras (por ejemplo, cambios que hayas hecho en Spoon o decisiones que hayas tomado) -->
-- Ayuda de compañeros o del profesor: <!-- TODO: indicar si la hubo, o escribir «ninguna» -->
+- Lo que adapté o decidí yo:
+- Ayuda de compañeros o del profesor:
