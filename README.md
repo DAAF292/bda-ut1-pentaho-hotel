@@ -117,9 +117,7 @@ Relación con el tema: almacenamiento (1.3: originales, provisionales y publicad
 - Seis pruebas (primera ejecución, repetición, falta de entrada, salida incompleta, total incorrecto, recuperación): [`evidencias/pruebas.md`](evidencias/pruebas.md). Se ejecutan y quedan registradas con `evidencias/ejecutar_pruebas.sh` (logs en `evidencias/logs/`).
 - Contraste independiente de Pentaho: `python3 evidencias/referencia.py` y `diff` con `salida/`.
 - Registros de sesión: [`sesion-01`](evidencias/sesion-01.md), [`sesion-02`](evidencias/sesion-02.md), [`sesion-03`](evidencias/sesion-03.md).
-- Guía paso a paso del proyecto, con capturas de Spoon: [`evidencias/guia_paso_a_paso.md`](evidencias/guia_paso_a_paso.md).
 - Capturas de cada proceso en Spoon: [`evidencias/capturas/`](evidencias/capturas/).
-- Preguntas de defensa: [`evidencias/guia_defensa.md`](evidencias/guia_defensa.md).
 
 **Al repetir la ejecución** con las mismas entradas se obtienen los mismos 13 grupos, las mismas 15 reservas y el mismo total; los archivos se sobrescriben y no crecen (prueba 2).
 
