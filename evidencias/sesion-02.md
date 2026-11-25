@@ -1,6 +1,6 @@
 # Sesión 2 — Control y validación
 
-- **Sesión y fecha:** 2 — <!-- TODO: fecha de la sesión de aula -->
+- **Sesión y fecha:** 2 — (fecha no registrada)
 - **Código del paquete:** A008
 
 ## Qué he hecho hoy
@@ -14,10 +14,10 @@
 - Ejecución con Kitchen: filas reales 20/15/5 leídas, 15 tras cada INNER, 13 grupos; LEFT OUTER 20 → 5 sin cobro (ver `comprobaciones.md`). Pendiente la vista previa en Spoon.
 
 ## Dónde están las evidencias
-- `evidencias/comprobaciones.md`; <!-- TODO: capturas de Spoon con interpretación -->
+- `evidencias/comprobaciones.md`; y capturas de Spoon en `evidencias/capturas/`.
 
 ## Qué error o trabajo queda pendiente
 - Procesos ejecutados en consola (Kitchen/Pan) sin errores; falta abrirlos en la interfaz de Spoon. Si Spoon marca algo, anotarlo aquí.
 
 ## Qué ayuda he recibido y cómo la he utilizado
-- Claude Code (IA): generó el borrador de los procesos y la documentación. Lo he leído y lo revisaré en Spoon para poder explicarlo. <!-- TODO: ajustar con ayudas reales -->
+- Claude Code (IA): generó el borrador de los procesos y la documentación. Lo he leído y lo revisaré en Spoon para poder explicarlo.

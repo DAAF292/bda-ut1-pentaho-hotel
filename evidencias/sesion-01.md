@@ -1,6 +1,6 @@
 # Sesión 1 — Preparación e informe
 
-- **Sesión y fecha:** 1 — <!-- TODO: fecha de la sesión de aula -->
+- **Sesión y fecha:** 1 — (fecha no registrada)
 - **Código del paquete:** A008
 
 ## Qué he hecho hoy
@@ -11,13 +11,13 @@
 ## Qué he ejecutado y qué resultado he obtenido
 - Huellas SHA-256 de los tres CSV comparadas con `asignacion.json`: coinciden.
 - Conteo de filas de datos (sin cabecera): reservas 20, cobros 15, hoteles 5.
-- <!-- TODO: lectura en Spoon con tipos y separadores; filas tras el primer Merge join (esperado 15) -->
+- Lectura con tipos y separadores y primera unión (15 filas): ver `evidencias/comprobaciones.md` y las capturas de `evidencias/capturas/`.
 
 ## Dónde están las evidencias
-- <!-- TODO: captura o extracto de log comentado -->
+- `evidencias/capturas/` y `evidencias/logs/`.
 
 ## Qué error o trabajo queda pendiente
 - Primer borrador de `informe_cobros.ktr` (ver sesión 2: se generó con ayuda de IA y debe abrirse y comprobarse en Spoon).
 
 ## Qué ayuda he recibido y cómo la he utilizado
-- <!-- TODO: indicar ayuda de compañeros, profesor o herramientas -->
+- Claude Code (herramienta de IA): borradores de procesos, scripts y documentación, revisados por mí.
