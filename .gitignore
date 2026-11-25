@@ -11,3 +11,7 @@
 # Sistema
 Thumbs.db
 .DS_Store
+
+# Contrastes regenerables (referencia.py / ejecutar_pruebas.sh)
+/evidencias/referencia_out/
+/evidencias/logs/referencia/

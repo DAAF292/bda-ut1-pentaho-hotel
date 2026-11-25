@@ -1,12 +1,12 @@
 # Sesión 1 — Preparación e informe
 
-- **Sesión y fecha:** 1 — <!-- TODO: fecha -->
+- **Sesión y fecha:** 1 — <!-- TODO: fecha de la sesión de aula -->
 - **Código del paquete:** A008
 
 ## Qué he hecho hoy
 - Recibido el paquete A008 y copiado `entrada/` y `asignacion.json` a la raíz del repositorio.
 - Creado el repositorio con las carpetas `entrada/`, `procesos/`, `temporal/`, `salida/` y `evidencias/`.
-- Añadidos `.gitignore` (con `/temporal/`) y un `README.md` inicial.
+- Añadidos `.gitignore` (con `/temporal/`) y un `README.md` inicial con recorrido y decisiones de diseño.
 
 ## Qué he ejecutado y qué resultado he obtenido
 - Huellas SHA-256 de los tres CSV comparadas con `asignacion.json`: coinciden.
@@ -17,7 +17,7 @@
 - <!-- TODO: captura o extracto de log comentado -->
 
 ## Qué error o trabajo queda pendiente
-- <!-- TODO: informe_cobros.ktr, reservas_sin_cobro.ktr, validaciones, job y pruebas -->
+- Primer borrador de `informe_cobros.ktr` (ver sesión 2: se generó con ayuda de IA y debe abrirse y comprobarse en Spoon).
 
 ## Qué ayuda he recibido y cómo la he utilizado
 - <!-- TODO: indicar ayuda de compañeros, profesor o herramientas -->
